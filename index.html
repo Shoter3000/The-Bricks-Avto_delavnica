@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8" />
+  <title>Avtomehanična delavnica</title>
+  <link rel="icon" type="image/x-icon" href="/images/car-parts.png">
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="main">
+    <h1>Avtomehanična delavnica</h1>
+
+    <canvas id="canvas" width="800" height="500"></canvas>
+    <div class="board">
+        <div class="controls">
+          <button id="pauseBtn">Pavza / Nadaljuj</button>
+          <button id="startBtn">Nova igra</button>
+          <button id="resetBtn">Ponovno zaženi nivo</button>
+        </div>
+
+        <div class="scoreboard">
+          <p>Točke: <span id="score">0</span></p>
+          <p>Najboljši rezultat: <span id="highScore">0</span></p>
+          <p>Čas nivoja: <span id="time">0 s</span></p>
+
+          <label for="difficultySelect">Težavnost:</label>
+          <select id="difficultySelect">
+            <option value="1">Lahko</option>
+            <option value="2" selected>Srednje</option>
+            <option value="3">Težko</option>
+          </select>
+        </div>
+    </div>
+
+  </div>
+  <script src="js/game.js"></script>
+</body>
+</html>
