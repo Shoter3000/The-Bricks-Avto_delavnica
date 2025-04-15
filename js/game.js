@@ -367,10 +367,18 @@ function startGame() {
   }
 }
 
+function resetHighScore() {
+  highScore = 0;
+  localStorage.setItem("highScore", highScore);
+  document.getElementById("highScore").innerText = highScore;
+}
+
 window.onload = () => {
+  resetHighScore();
   document.getElementById("startBtn").addEventListener("click", () => {
     resetGame(true);
     startGame();
+    resetHighScore();
   });
 
   document.getElementById("pauseBtn").addEventListener("click", togglePause);
