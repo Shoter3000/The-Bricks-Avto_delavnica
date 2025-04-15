@@ -308,15 +308,21 @@ var leftPressed = false;
 
 function togglePause() {
   if (gameRunning) {
+    const pauseBtn = document.getElementById("pauseBtn");
+    const pauseBtnImg = pauseBtn.querySelector("img");
+    
     if (gamePaused) {
       gameInterval = setInterval(draw, 10);
       gamePaused = false;
+      if (pauseBtnImg) pauseBtnImg.src = "Images/pause.png";
     } else {
       clearInterval(gameInterval);
       gamePaused = true;
+      if (pauseBtnImg) pauseBtnImg.src = "Images/play.png";
     }
   }
 }
+
 
 document.addEventListener("keydown", function (e) {
   if (e.key === "ArrowRight") rightPressed = true;
