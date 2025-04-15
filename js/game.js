@@ -228,7 +228,10 @@ function checkWin() {
         title: 'Odlično!',
         text: 'Naslednji nivo!',
         confirmButtonText: 'Naprej!',
-        heightAuto: false
+        heightAuto: false,
+        customClass: {
+          confirmButton: 'swal-button',
+      }
       }).then(() => {
         resetGame(false);
         startGame();
@@ -239,7 +242,10 @@ function checkWin() {
         title: 'Zmagal si! 🏆',
         text: 'Premagal si vse nivoje!',
         confirmButtonText: 'Nova igra',
-        heightAuto: false
+        heightAuto: false,
+        customClass: {
+          confirmButton: 'swal-button',
+      }
       }).then(() => {
         currentLevel = 0;
         resetGame(true);
@@ -296,7 +302,10 @@ function gameOver() {
     title: 'Konec igre!',
     text: 'Izgubil si! Poskusi znova',
     confirmButtonText: 'OK',
-    heightAuto: false
+    heightAuto: false,
+    customClass: {
+      confirmButton: 'swal-button',
+  }
   });
 }
 
