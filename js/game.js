@@ -399,3 +399,20 @@ window.onload = () => {
 
   document.getElementById("difficultySelect").addEventListener("change", updateDifficulty);
 };
+
+
+//sweetalert
+document.getElementById('canvas').addEventListener('click', function() {
+  Swal.fire({
+    title: 'Razvijalec',
+    text: 'Nejc Vidmar',
+    icon: 'info',
+    iconColor: 'rgb(108, 108, 108)',
+    confirmButtonText: 'Zapri',
+    heightAuto: false,
+    customClass: {
+      confirmButton: 'swal-button',
+      icon: 'custom-icon'
+    }
+  });
+});
